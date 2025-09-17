@@ -40,26 +40,34 @@ header {
   width: 100px;
 }
 
+/* NAVIGATION */
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   padding: 10px 0;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-nav a:hover {
+nav ul li a:hover {
   color: #f0b90b;
 }
 
-/* HERO */
+/* HAMBURGER ICON */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
 .hero {
   padding: 100px 20px;
   text-align: center;
@@ -71,7 +79,7 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 .about,
 .services,
 .contact {
@@ -80,7 +88,7 @@ nav a:hover {
   margin: auto;
 }
 
-/* SERVICES SECTION */
+/* SERVICES */
 .services-row {
   display: flex;
   flex-wrap: wrap;
@@ -106,7 +114,7 @@ nav a:hover {
 
 .service-box img {
   width: 100%;
-  height: 150px;
+  height: 100px;
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
@@ -146,31 +154,40 @@ footer {
   margin-top: 40px;
 }
 
-/* --------------------- */
-/* 📱 RESPONSIVE DESIGN */
-/* --------------------- */
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+  .menu-toggle {
+    display: block;
   }
 
   nav ul {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    width: 100%;
+    background-color: #1c1c1c;
+    margin-top: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 20px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .service-box {
     width: 100%;
   }
 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo {
-    margin-bottom: 10px;
+  .hero h1 {
+    font-size: 2rem;
   }
 }
 
@@ -181,6 +198,10 @@ footer {
 
   .hero h1 {
     font-size: 1.8rem;
+  }
+
+  .service-box img {
+    height: 90px;
   }
 
   .service-box h3 {

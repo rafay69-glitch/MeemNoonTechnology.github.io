@@ -1,5 +1,9 @@
-document.getElementById("contact-form")?.addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thank you! We will get back to you shortly.");
-  this.reset();
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navUl = document.querySelector("nav ul");
+
+  menuToggle.addEventListener("click", function () {
+    navUl.classList.toggle("show");
+  });
 });
+
