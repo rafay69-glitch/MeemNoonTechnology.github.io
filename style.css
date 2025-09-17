@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -26,49 +26,42 @@ body {
   }
 }
 
-/* === HEADER === */
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 15px 20px;
+  padding: 20px 40px;
   background: #1c1c1c;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .logo img {
-  width: 100px;
+  width: 120px;
 }
 
-/* MENU */
+/* NAVIGATION */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 30px;
   flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 1.1rem;
   transition: color 0.3s;
-  white-space: nowrap;
 }
 
 nav ul li a:hover {
   color: #f0b90b;
 }
 
-/* Hide menu-toggle (hamburger) */
-.menu-toggle {
-  display: none;
-}
-
-/* HERO */
+/* HERO SECTION */
 .hero {
   padding: 100px 20px;
   text-align: center;
@@ -80,7 +73,7 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-/* ABOUT, SERVICES, CONTACT */
+/* GENERAL SECTIONS */
 .about,
 .services,
 .contact {
@@ -89,7 +82,7 @@ nav ul li a:hover {
   margin: auto;
 }
 
-/* SERVICES SECTION */
+/* SERVICES */
 .services-row {
   display: flex;
   flex-wrap: wrap;
@@ -119,7 +112,6 @@ nav ul li a:hover {
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 10px;
-  display: block;
 }
 
 .service-box h3 {
@@ -154,53 +146,49 @@ footer {
   margin-top: 40px;
 }
 
-/* === RESPONSIVE STYLES === */
+footer p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
   header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+    padding: 15px 20px;
   }
 
   nav ul {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
-  }
-
-  nav ul::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-  }
-
-  nav ul li {
-    flex: 0 0 auto;
-  }
-
-  nav ul li a {
-    font-size: 0.85rem;
+    gap: 15px;
   }
 
   .service-box {
     width: 100%;
   }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 60px 15px;
+    padding: 50px 15px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .logo img {
+    width: 80px; /* Smaller logo on mobile */
+  }
+
+  nav ul {
+    gap: 12px; /* Less gap for nav */
+  }
+
+  nav ul li a {
+    font-size: 0.9rem; /* Smaller nav text */
   }
 
   .service-box img {
-    height: 90px;
+    height: 80px;
   }
 
   .service-box h3 {
@@ -211,3 +199,5 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+

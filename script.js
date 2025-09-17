@@ -1,14 +1,12 @@
-// JavaScript is not required right now for menu
-// But if needed in future, you can add toggle features here
-
-// Example: Scroll to top on logo click (optional)
-document.addEventListener("DOMContentLoaded", function () {
-  const logo = document.querySelector(".logo");
-
-  if (logo) {
-    logo.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
+// Footer me thank you message add karne ka JS code
+window.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector("footer");
+  const thankYouMsg = document.createElement("p");
+  thankYouMsg.textContent = " Thank you for visiting MeemNoon Technology!";
+  thankYouMsg.style.color = "#aaa";
+  thankYouMsg.style.fontSize = "0.9rem";
+  thankYouMsg.style.marginTop = "8px";
+  thankYouMsg.style.textAlign = "center";
+  footer.appendChild(thankYouMsg);
 });
 
