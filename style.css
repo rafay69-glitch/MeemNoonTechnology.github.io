@@ -26,6 +26,11 @@ body {
   }
 }
 
+/* Fade-in toggle class for service boxes */
+.fade-in-toggle {
+  animation: fadeIn 1s ease-out forwards;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -99,6 +104,7 @@ nav ul li a:hover {
   width: calc(50% - 20px);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .service-box:hover {
@@ -199,5 +205,4 @@ footer p {
     font-size: 0.85rem;
   }
 }
-
 
